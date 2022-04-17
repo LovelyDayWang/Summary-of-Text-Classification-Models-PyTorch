@@ -4,7 +4,7 @@ import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument('-MODEL_DIR', type=str, default='./results')
 
-parser.add_argument('-model_name', type=str, default='Bert', choices=['MLP', 'TextCNN', 'TextRNN'])
+parser.add_argument('-model_name', type=str, default='MLP', choices=['MLP', 'TextCNN', 'TextRNN', 'Bert'])
 parser.add_argument('-data_name', type=str, default='20news', choices=['sogou_news', '20news', 'THUCNews'])
 parser.add_argument('-train_path', type=str, default='./data/THUCNews/train.txt')
 parser.add_argument('-dev_path', type=str, default='./data/THUCNews/dev.txt')
@@ -13,7 +13,7 @@ parser.add_argument('-vocab_path', type=str, default='./data/THUCNews/vocab.pkl'
 parser.add_argument('-use_word', type=bool, default=False)
 
 # Hyper parameters
-parser.add_argument('-lr', type=float, default=1e-5)
+parser.add_argument('-lr', type=float, default=1e-3)
 parser.add_argument('-pad_size', type=int, default=32)
 parser.add_argument('-batch_size', type=float, default=128)
 parser.add_argument('-dropout', type=float, default=0.3)
