@@ -1,12 +1,13 @@
 # Summary-of-Text-Classification-Models-PyTorch
 ## 1.Models
 
-| Model    | batch size | lr   | embed size | embedding  | pad size | acc    | Others  |
-| -------- | ---------- | ---- | ---------- | ---------- | -------- | ------ | ------- |
-| MLP      | 128        | 1e-3 | 100        | 随机初始化 | 32       | 91.88% |         |
-| TextRNN  | 128        | 1e-3 | 100        | 随机初始化 | 32       | 91.88% | Bi-LSTM |
-| TextCNN  | --         | --   | --         | --         | --       | --     | 待完善  |
-| TextRCNN | --         | --   | --         | --         | --       | --     | 待完善  |
+| Model   | batch size | lr     | embed size | embedding  | pad size | acc    | Others  |
+|---------|------------|--------|----------| ---------- |---------|--------| ------- |
+| MLP     | 128        | 1e-3   | 100      | 随机初始化 | 32      | 91.88% |         |
+| TextRNN | 128        | 1e-3   | 100      | 随机初始化 | 32      | 91.88% | Bi-LSTM |
+| TextCNN | --         | --     | --       | --         | --      | --     | 待完善  |
+| TextRCNN | --        | --     | --       | --         | --      | --     | 待完善  |
+| Bert    | 128        | 1e-5   | 768      | --         | 32      | 94.51% | 待完善  |
 
 
 
