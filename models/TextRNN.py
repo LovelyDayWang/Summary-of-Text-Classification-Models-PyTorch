@@ -10,7 +10,8 @@ class Model(nn.Module):
         self.embedding = nn.Embedding(args.vocab_nums, args.embed_size, padding_idx=0)
         self.dropout = nn.Dropout(args.dropout)
 
-        self.bi_lstm = nn.LSTM(args.embed_size, args.hidden_dim, batch_first=True, bidirectional=True)
+        self.bi_lstm = nn.LSTM(args.embed_size, args.hidden_dim, batch_first=True,
+                               bidirectional=True, dropout=args.dropout)
 
         self.fc = nn.Linear(args.hidden_dim * 2, args.class_nums)
 

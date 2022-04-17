@@ -1,13 +1,22 @@
 # Summary-of-Text-Classification-Models-PyTorch
-## 1.Models
+初衷：针对文本分类方向集合一下相关的数据集并处理成统一的格式，针对文本分类方向的模型进行收集并复现并在相应数据集上进行实验，
+方便大家在入门时直接运行代码，进行实验；同时方便相关研究学者在发表论文时可使用本项目直接在相关baseline模型上获取实验结果，
+节省复现对比模型的时间。
 
-| Model   | batch size | lr     | embed size | embedding  | pad size | acc    | Others  |
-|---------|------------|--------|----------| ---------- |---------|--------| ------- |
-| MLP     | 128        | 1e-3   | 100      | 随机初始化 | 32      | 87.51% |         |
-| TextRNN | 128        | 1e-3   | 100      | 随机初始化 | 32      | 91.88% | Bi-LSTM |
-| TextCNN | --         | --     | --       | --         | --      | --     | 待完善  |
-| TextRCNN | --        | --     | --       | --         | --      | --     | 待完善  |
-| Bert    | 128        | 1e-5   | 768      | --         | 32      | 94.51% | 待完善  |
+
+## 1.Models
+基础文本分类模型：MLP、TextRNN、TextCNN、TextRCNN  
+预训练模型：Bert-base-chinese、ERNIE-base-chinese、Bert-wwm-ext-chinese  
+预训练模型+文本分类模型：Bert-base-chinese + (MLP、CNN、RNN、RCNN)  
+
+| Model              | batch size | lr   | embed size | embedding | pad size | acc    | Others |
+|--------------------|----------|------|----------|---------|----------|--------|---|
+| MLP                | 128      | 1e-3 | 300      | 随机初始化   | 32       | 87.51% |   |
+| TextRNN            | 128      | 1e-3 | 300      | 随机初始化   | 32       | 91.88% | Bi-LSTM |
+| TextCNN            | 128      | 1e-3 | 300      | 随机初始化   | 32       | 90.17% | 1维卷积 |
+| TextRCNN           | 128      | 1e-3 | 300      | 随机初始化   | 32       | 91.52% |   |
+| Bert-base-chinese  | 128      | 1e-5 | 768      | --      | 32       | 94.51% |   |
+| ERNIE-base-chinese | 128      | 1e-5 | 768      | --      | 32       | --     | 待完善 |
 
 
 
